@@ -12,8 +12,10 @@ import {
 } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
+import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
+import 'rxjs/add/operator/do';
 
 import { Logger, LogManager } from '@lvo/logging';
 import { UUID } from 'angular2-uuid';
@@ -97,7 +99,7 @@ export class HttpService extends Http {
     }
   }
 
-  public handleError = (error: Response) => {
+  public handleError = (error: Observable<Response>) => {
     // Do messaging and error handling here
     this.logger.error('HTTP-Error', error);
     return Observable.throw(error);
