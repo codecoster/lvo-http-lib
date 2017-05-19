@@ -1,0 +1,26 @@
+{
+  "name": "@lvo/http",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LVM-IT/lvo-http-lib/tree/1.0.0"
+  },
+  "author": {
+    "name": "LVM"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LVM-IT/lvo-http-lib/issues"
+  },
+  "module": "lvo-http.js",
+  "typings": "lvo-http.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.1.2",
+    "@angular/http": "^4.1.2",
+    "angular2-uuid": "^1.1.1",
+    "@lvo/logging": "1.0.2"
+  }
+}

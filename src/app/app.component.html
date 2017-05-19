@@ -1,0 +1,29 @@
+<h1>
+  {{title}}
+</h1>
+
+<h3>User</h3>
+
+<div>
+<ul *ngIf="user">
+  <li>Name: {{user.name}}</li>
+  <li>Id: {{user.id}}</li>
+</ul>
+</div>
+
+<div>
+
+<ul *ngIf="error">
+  <li>Status: {{error.status}}</li>
+  <li>Error Message: {{error.statusText}}</li>
+</ul>
+
+  <ul *ngIf="errorMessage">
+    <li>Nice Error Message: {{errorMessage}}</li>
+  </ul>
+
+</div>
+
+<button class="action" (click)="testSuccess()">get User per Http</button>
+<button class="action" (click)="test404Error()">get 404 Error</button>
+<button class="action" (click)="testValidationError()">get Validation Errors</button>

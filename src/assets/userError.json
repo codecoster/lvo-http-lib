@@ -1,0 +1,20 @@
+{
+  "name": "Pan1",
+  "id": "x",
+  "messages": [
+    {
+      "ref": "name",
+      "value": "Pan1",
+      "text": "Name Pan1 not found",
+      "code": 404,
+      "severity": "ERROR"
+    },
+    {
+      "ref": "id",
+      "value": "x",
+      "code": 406,
+      "text": "Value x is not valid",
+      "severity": "ERROR"
+    }
+  ]
+}
