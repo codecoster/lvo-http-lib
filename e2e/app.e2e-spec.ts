@@ -7,8 +7,10 @@ describe('http App', () => {
     page = new HttpPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should have a h1 section', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toBeTruthy();
   });
+
+
 });
