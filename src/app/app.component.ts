@@ -4,7 +4,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
-import { Http, RequestOptions } from '@angular/http';
+import { Http } from '@angular/http';
 
 
 import { Logger, LogManager } from '@lvo/logging';
@@ -36,7 +36,6 @@ export class AppComponent {
   }
 
 
-
   subscribeToUser(uri): void {
     this.reset();
 
@@ -63,10 +62,11 @@ export class AppComponent {
       .do(response => {
         this._logger.debug('do check response status code', response);
 
-        if (!response.status){
-          if (response.messages){
+        if (!response.status) {
+          if (response.messages) {
             this.errorMessage =
-              `This is a hacky validation message: Unfortunately something went wrong: [code=${response.messages[0].text}] [Text=${response.messages[0].code}]`;
+              `This is a hacky validation message:
+              Unfortunately something went wrong: [code=${response.messages[0].text}] [Text=${response.messages[0].code}]`;
           }
         }
 
@@ -76,7 +76,7 @@ export class AppComponent {
   }
 
 
-  testSuccess(){
+  testSuccess() {
     this.subscribeToUser('assets/user.json');
   }
 
