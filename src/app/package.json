@@ -1,9 +1,9 @@
 {
   "name": "@lvo/http",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LVM-IT/lvo-http-lib/tree/1.0.0"
+    "url": "https://github.com/LVM-IT/lvo-http-lib/tree/1.0.1"
   },
   "author": {
     "name": "LVM"
@@ -21,6 +21,6 @@
     "@angular/core": "^4.1.2",
     "@angular/http": "^4.1.2",
     "angular2-uuid": "^1.1.1",
-    "@lvo/logging": "1.0.2"
+    "@lvo/logging": "1.0.3"
   }
 }
