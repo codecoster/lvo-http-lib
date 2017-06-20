@@ -11,9 +11,6 @@
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/guide/styleguide)
 
 
-[![NPM](https://nodei.co/npm/@lvo%2Fhttp.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/@lvo/http)
-[![NPM](https://nodei.co/npm-dl/@lvo%2Fhttp.png?height=3&months=6)](https://npmjs.org/@lvo/http)
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
