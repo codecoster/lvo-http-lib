@@ -1,5 +1,7 @@
 # Http
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/LVM-IT/lvo-http-lib.svg)](https://greenkeeper.io/)
+
 [![npm version](https://badge.fury.io/js/%40lvo%2Fhttp.svg)](https://badge.fury.io/js/%40lvo%2Fhttp)
 [![Build Status](https://travis-ci.org/LVM-IT/lvo-http-lib.svg?branch=master)](https://travis-ci.org/LVM-IT/lvo-http-lib)
 [![codecov](https://codecov.io/gh/LVM-IT/lvo-http-lib/branch/master/graph/badge.svg)](https://codecov.io/gh/LVM-IT/lvo-http-lib)
