@@ -8,7 +8,10 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/lvm-it/lvo-http-lib/badge.svg?targetFile=http%2Fpackage.json)](https://snyk.io/test/github/lvm-it/lvo-http-lib?targetFile=http%2Fpackage.json)
 [![Dependency Status][david-badge]][david-badge-url]
 [![devDependency Status][david-dev-badge]][david-dev-badge-url]
+[![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/guide/styleguide)
 
+[![NPM](https://nodei.co/npm/ngx-bootstrap.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/@lvo/http)
+[![NPM](https://nodei.co/npm-dl/ngx-bootstrap.png?height=3&months=6)](https://npmjs.org/@lvo/http)
 
 ## Development server
 
