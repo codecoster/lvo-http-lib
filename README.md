@@ -10,8 +10,9 @@
 [![devDependency Status][david-dev-badge]][david-dev-badge-url]
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/guide/styleguide)
 
-[![NPM](https://nodei.co/npm/ngx-bootstrap.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/@lvo/http)
-[![NPM](https://nodei.co/npm-dl/ngx-bootstrap.png?height=3&months=6)](https://npmjs.org/@lvo/http)
+
+[![NPM](https://nodei.co/npm/@lvo%2Fhttp.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/@lvo/http)
+[![NPM](https://nodei.co/npm-dl/@lvo%2Fhttp.png?height=3&months=6)](https://npmjs.org/@lvo/http)
 
 ## Development server
 
