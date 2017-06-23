@@ -1,13 +1,12 @@
 # Http
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/LVM-IT/lvo-http-lib.svg)](https://greenkeeper.io/)
-
 [![npm version](https://badge.fury.io/js/%40lvo%2Fhttp.svg)](https://badge.fury.io/js/%40lvo%2Fhttp)
 [![Build Status](https://travis-ci.org/LVM-IT/lvo-http-lib.svg?branch=master)](https://travis-ci.org/LVM-IT/lvo-http-lib)
 [![codecov](https://codecov.io/gh/LVM-IT/lvo-http-lib/branch/master/graph/badge.svg)](https://codecov.io/gh/LVM-IT/lvo-http-lib)
 [![Known Vulnerabilities](https://snyk.io/test/github/lvm-it/lvo-http-lib/badge.svg?targetFile=http%2Fpackage.json)](https://snyk.io/test/github/lvm-it/lvo-http-lib?targetFile=http%2Fpackage.json)
 [![Dependency Status][david-badge]][david-badge-url]
 [![devDependency Status][david-dev-badge]][david-dev-badge-url]
+[![Greenkeeper badge](https://badges.greenkeeper.io/LVM-IT/lvo-http-lib.svg)](https://greenkeeper.io/)
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/guide/styleguide)
 
 
