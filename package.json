@@ -53,7 +53,7 @@
     "ts-node": "3.1.0",
     "tslint": "5.4.3",
     "typescript": "2.3.4",
-    "rollup": "^0.43.0",
+    "rollup": "^0.45.2",
     "run-sequence": "^1.2.2",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
