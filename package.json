@@ -30,7 +30,7 @@
     "@angular/common": "^4.1.2",
     "@angular/compiler": "^4.1.2",
     "@angular/forms": "^4.1.2",
-    "@angular/platform-browser": "^4.1.2",
+    "@angular/platform-browser": "^4.3.2",
     "@angular/platform-browser-dynamic": "^4.1.2",
     "@angular/router": "^4.1.2",
     "core-js": "^2.4.1",
