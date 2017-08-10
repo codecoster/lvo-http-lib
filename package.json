@@ -22,7 +22,7 @@
   "private": true,
   "dependencies": {
     "@angular/core": "^4.1.2",
-    "@angular/http": "^4.1.2",
+    "@angular/http": "^4.3.4",
     "angular2-uuid": "^1.1.1",
     "@lvo/logging": "1.0.3"
   },
