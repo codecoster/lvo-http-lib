@@ -1,11 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-
-import { Http } from '@angular/http';
-
 
 import { Logger, LogManager } from '@lvo/logging';
 import { User } from './model/user';
@@ -18,7 +16,7 @@ import { User } from './model/user';
 
 export class AppComponent {
 
-  private _logger: Logger;
+  private logger: Logger;
 
   title = 'app works!';
 
@@ -29,10 +27,10 @@ export class AppComponent {
   public errorMessage = '';
 
 
-  constructor(private http: Http,
-              private _logManager: LogManager) {
-    this._logger = _logManager.getLogger(this);
-    this._logger.debug('construction');
+  constructor(private http: HttpClient,
+    logManager: LogManager) {
+    this.logger = logManager.getLogger(this);
+    this.logger.debug('construction');
   }
 
 
@@ -41,7 +39,7 @@ export class AppComponent {
 
     this.getUser(uri).subscribe(user => {
       this.user = user;
-      this._logger.info('user received: ', this.user);
+      this.logger.info('user received: ', this.user);
     });
 
 
@@ -57,21 +55,15 @@ export class AppComponent {
   getUser(uri): Observable<User> {
 
     return this.http
-      .get(uri)
-      .map(response => response.json())
+      .get<User>(uri, { observe: 'response' })
       .do(response => {
-        this._logger.debug('do check response status code', response);
-
-        if (!response.status) {
-          if (response.messages) {
-            this.errorMessage =
-              `This is a hacky validation message:
-              Unfortunately something went wrong: [code=${response.messages[0].text}] [Text=${response.messages[0].code}]`;
-          }
-        }
-
-
-      }).catch(this.handleError);
+        this.logger.debug('do check response status code', response);
+        this.errorMessage =
+          `This is a hacky validation message:
+              Unfortunately something went wrong: [code=${response.statusText}] [Text=${response.status}]`;
+      })
+      .map(response => response.body)
+      .catch(this.handleError);
 
   }
 
@@ -91,7 +83,7 @@ export class AppComponent {
 
   private handleError = (error: Response) => {
     // Do messaging and error handling here
-    this._logger.error('HTTP-Error', error);
+    this.logger.error('HTTP-Error', error);
     this.error = error;
 
     return Observable.throw(error);

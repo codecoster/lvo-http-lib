@@ -1,2 +1,2 @@
-export * from './core/http.module';
-export * from './core/http.service';
+export * from './core/http-interceptor.module';
+export * from './core/http-interceptor.service';

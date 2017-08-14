@@ -1,16 +1,14 @@
 import { async, TestBed } from '@angular/core/testing';
 
-import { AppComponent } from './app.component';
 import { Http } from '@angular/http';
-import { HttpService } from './core/http.service';
 import { LoggingModule } from '@lvo/logging';
-import { HttpServiceModule } from './core/http.module';
+import { LvoHttpInterceptorModule } from './core/http-interceptor.module';
+import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [LoggingModule, HttpServiceModule],
-      providers: [{provide: Http, useClass: HttpService}],
+      imports: [LoggingModule, LvoHttpInterceptorModule],
       declarations: [
         AppComponent
       ],
@@ -56,18 +54,18 @@ describe('AppComponent', () => {
 
     comp.getUser('assets/user1.json').subscribe(
       x => {
-        console.log('onNext: %s', x)
+        console.log('onNext: %s', x);
         fail('expected error');
       },
       e => {
         expect(e.status).toBe(404);
-        console.log('onError: %s', e)
+        console.log('onError: %s', e);
       },
       () => {
         console.log('onCompleted');
         fail('expected error');
       });
-  }))
+  }));
 
 });
 
