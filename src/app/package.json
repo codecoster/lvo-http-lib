@@ -1,6 +1,6 @@
 {
   "name": "@lvo/http",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/LVM-IT/lvo-http-lib.git"
@@ -18,8 +18,7 @@
   "module": "lvo-http.js",
   "typings": "lvo-http.d.ts",
   "peerDependencies": {
-    "@angular/core": "^4.2.4",
-    "@angular/http": "^4.2.4",
+    "@angular/core": "^4.3.0",
     "angular2-uuid": "^1.0.0",
     "@lvo/logging": "1.0.4"
   }
