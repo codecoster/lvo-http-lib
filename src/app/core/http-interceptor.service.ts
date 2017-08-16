@@ -3,7 +3,7 @@ import { Injectable, Optional } from '@angular/core';
 
 import { Logger, LogManager } from '@lvo/logging';
 import { UUID } from 'angular2-uuid';
-import 'rxjs/add/observable/throw';
+import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 
@@ -15,13 +15,13 @@ export class LvoHttpInterceptor implements HttpInterceptor {
 
   private logger: Logger;
 
-  public handleError = (error: Observable<HttpResponse<any>>) => {
+  public handleError: (Observable) => ErrorObservable = (error: Observable<HttpResponse<any>>) => {
     // Do messaging and error handling here
     this.logger.error('HTTP-Error', error);
     return Observable.throw(error);
   }
 
-  constructor( @Optional() logManager: LogManager) {
+  constructor(@Optional() logManager: LogManager) {
     if (logManager) {
       this.logger = logManager.getLogger(this);
     }
@@ -37,10 +37,10 @@ export class LvoHttpInterceptor implements HttpInterceptor {
 
     return next.handle(req)
       .do(event => { // intercept chain an log the responses
-        if (event instanceof HttpResponse) {
-          this.logResponse(event, uuid, startDate.getTime());
+          if (event instanceof HttpResponse) {
+            this.logResponse(event, uuid, startDate.getTime());
+          }
         }
-      }
       ).catch(this.handleError);
   }
 
